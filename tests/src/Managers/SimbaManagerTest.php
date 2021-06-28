@@ -43,4 +43,20 @@ class SimbaManagerTest extends TestCase
 		$this->assertEquals($simba->getYCoordinate(), 1);
 		$this->assertEquals($simba->getDirection(), 'NORTH');
 	}
+
+	// should be a test on base model
+	public function testUpdate() 
+	{
+		$simba = $this->simbaManager->findByPk(1);
+		$simba->setDirection('EAST');
+		$simba->setXCoordinate(10);
+		$simba->setYCoordinate(10);
+
+		$this->simbaManager->update($simba);
+
+		$simba = $this->simbaManager->findByPk(1);
+		$this->assertEquals($simba->getXCoordinate(), 10);
+		$this->assertEquals($simba->getYCoordinate(), 10);
+		$this->assertEquals($simba->getDirection(), 'EAST');
+	}
 }

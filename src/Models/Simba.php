@@ -23,4 +23,16 @@ class Simba extends BaseModel
 	public function getDirection() {
 		return $this->direction;
 	}
+
+	public function setXCoordinate($xCoordinate) {
+		$this->xCoordinate = $xCoordinate;
+	}
+
+	public function setYCoordinate($yCoordinate) {
+		$this->yCoordinate = $yCoordinate;
+	}
+
+	public function setDirection($direction) {
+		$this->direction = $direction;
+	}
 }
