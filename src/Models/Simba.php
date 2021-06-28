@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Models;
+
+class Simba extends BaseModel
+{
+	private $xCoordinate, $yCoordinate, $direction; 
+
+	public function __construct($xCoordinate, $yCoordinate, $direction) {
+		$this->xCoordinate = $xCoordinate;
+		$this->yCoordinate = $yCoordinate;
+		$this->direction = $direction;
+	}
+
+	public function getXCoordinate() {
+		return $this->xCoordinate;
+	}
+
+	public function getYCoordinate() {
+		return $this->yCoordinate;
+	}
+
+	public function getDirection() {
+		return $this->direction;
+	}
+}
