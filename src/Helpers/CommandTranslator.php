@@ -18,6 +18,7 @@ class CommandTranslator
 		foreach($commands as $command) 
 		{
 			$movement = $this->getMovement($command, $direction);	
+			$direction = $movement->direction;
 			$movements[] = $movement;
 		}
 
