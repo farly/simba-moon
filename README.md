@@ -15,5 +15,5 @@
 
 ## Running Tests
 execute command a project root
-`php ./bin/console tests`
+`php ./bin/console tests/src`
 
